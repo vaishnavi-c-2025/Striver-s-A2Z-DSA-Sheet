@@ -1,0 +1,18 @@
+// User function Template for Java
+class Solution {
+    public int getSecondLargest(int[] arr) {
+        // Code Here
+        int largest = arr[0];
+        int second_largest = -1;
+        for(int num : arr){
+            if(num > largest){
+                second_largest = largest;
+                largest = num;
+            }
+            if(num < largest && num > second_largest){
+                second_largest = num;
+            }
+        }
+        return second_largest;
+    }
+}
